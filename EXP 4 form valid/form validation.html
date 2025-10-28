@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form Validation</title>
+</head>
+<body>
+
+<form id="regForm" onsubmit="return validateForm()">
+    <h2>Registration Form</h2>
+    
+    <label>Username:</label>
+    <input type="text" id="username" required><br><br>    
+    
+    <label>Email:</label>
+    <input type="email" id="email" required><br><br>
+    
+    <label>Password:</label>
+    <input type="password" id="password" required><br><br>
+    
+    <label>Confirm Password:</label>
+    <input type="password" id="confirmPassword" required><br><br>
+    
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+function validateForm() {
+    let username = document.getElementById("username").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let password = document.getElementById("password").value;
+    let confirmPassword = document.getElementById("confirmPassword").value;
+
+    let usernamePattern = /^[A-Za-z]{1,9}$/;
+    if (!usernamePattern.test(username)) {
+        alert("Username must contain 1 to 9 letters only.");
+        return false;
+    }
+
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        return false;
+    }
+
+    let passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{1,7}$/;
+    if (!passwordPattern.test(password)) {
+        alert("Password must be less than 8 characters and include:\n1 uppercase, 1 lowercase, 1 digit, and 1 special character.");
+        return false;
+    }
+
+    if (password !== confirmPassword) {
+        alert("Passwords do not match.");
+        return false;
+    }
+
+    alert("Registration Successful!");
+    return true;
+}
+</script>
+
+</body>
+</html>
