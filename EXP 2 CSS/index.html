@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Personal Info - Frames</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+      background-color: #1e100b;
+    }
+    .left, .right {
+      width: 50%;
+      padding: 20px;
+      box-sizing: border-box;
+      overflow-y: auto;
+    }
+    .left {
+      background-color: #3a1f0f;
+      color: #fff;
+    }
+    .right {
+      background-color: #2e1c14;
+      color: #fff;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      background-color: #442818;
+    }
+    th, td {
+      border: 1px solid #fff;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #ffcc00;
+      color: #000;
+    }
+    .highlight {
+      color: #ffc107;
+      font-size: 26px;
+    }
+    img.college-logo {
+      display: block;
+      margin: 15px auto;
+      border-radius: 10px;
+      box-shadow: 0 0 12px #ffcc00;
+    }
+    iframe, audio {
+      margin-top: 20px;
+      width: 100%;
+      border-radius: 8px;
+    }
+    /* Add a modern hover effect */
+    a {
+      color: #ffcc00;
+      text-decoration: none;
+      border-bottom: 2px dotted #ffc10744;
+      transition: color .3s, border .4s;
+    }
+    a:hover {
+      color: #fff;
+      border-bottom: 2px solid #fff;
+    }
+    /* Animated table row hover */
+    tr:hover td {
+      background-color: #2e1c14;
+      color: #ffcc00;
+      transition: all 0.4s;
+    }
+    /* Subtle list item hover */
+    li {
+      transition: background .3s, color .3s;
+      margin-bottom: 7px;
+      padding: 3px 7px;
+      border-radius: 6px;
+    }
+    li:hover {
+      background: #441f0f;
+      color: #ffcc00;
+    }
+  </style>
+</head>
+<body>
+  <div class="left">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png" alt="College Logo" width="120" class="college-logo">
+    <h2 class="highlight">Personal Info</h2>
+    <table>
+      <tr>
+        <th>Name</th>
+        <td>NAMEEEE</td>
+      </tr>
+      <tr>
+        <th>Roll No</th>
+        <td>23CS0123</td>
+      </tr>
+      <tr>
+        <th>Branch</th>
+        <td>Computer Science</td>
+      </tr>
+    </table>
+    <h3>Links</h3>
+    <ul>
+      <li><a href="https://www.w3schools.com" target="_blank">Learn HTML (W3Schools)</a></li>
+      <li><a href="mailto:rahul@example.com">Mail ME</a></li>
+      <li><a href="tel:+919876543210">Call: +91-0123456789</a></li>
+    </ul>
+  </div>
+  <div class="right">
+    <h2 class="highlight">My College</h2>
+    <p>
+      Welcome to my college page. Here you can see details about my college, a short intro video, and a college anthem audio.
+    </p>
+    <table>
+      <tr>
+        <th>College</th>
+        <td>ABC Institute of Technology</td>
+      </tr>
+      <tr>
+        <th>Location</th>
+        <td>Mumbai, India</td>
+      </tr>
+      <tr>
+        <th>Website</th>
+        <td><a href="https://examplecollege.edu" target="_blank">Visit College Site</a></td>
+      </tr>
+    </table>
+    <h3>Quick List</h3>
+    <ul>
+      <li>Good Infrastructure</li>
+      <li>Placements</li>
+      <li>Experienced Faculty</li>
+      <li>Student Clubs</li>
+    </ul>
+    <h3>Intro Video</h3>
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" height="180" allowfullscreen></iframe>
+    <h3>College Anthem</h3>
+    <audio controls>
+      <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+</body>
+</html>
